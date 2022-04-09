@@ -67,22 +67,22 @@ def leftPaddleRight():
 def rightPaddleUp():
     y = rightPaddle.ycor()
     y += 20
-    leftPaddle.sety(y)
+    rightPaddle.sety(y)
 
 def rightPaddleDown():
     y = rightPaddle.ycor()
     y -= 20
-    leftPaddle.sety(y)
+    rightPaddle.sety(y)
 
 def rightPaddleLeft():
     x = rightPaddle.xcor()
     x -= 20
-    leftPaddle.setx(x)
+    rightPaddle.setx(x)
 
 def rightPaddleRight():
     x = rightPaddle.xcor()
     x += 20
-    leftPaddle.setx(x)
+    rightPaddle.setx(x)
 
 # Keyboard binding
 window.listen()
