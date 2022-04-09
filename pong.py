@@ -51,17 +51,17 @@ def leftPaddleUp():
 
 def leftPaddleDown():
     y = leftPaddle.ycor()
-    y += 20
+    y -= 20
     leftPaddle.sety(y)    
 
 def leftPaddleLeft():
-    y = leftPaddle.ycor()
-    y += 20
+    x = leftPaddle.ycor()
+    x += 20
     leftPaddle.sety(y)
 
 def leftPaddleRight():
-    y = leftPaddle.ycor()
-    y += 20
+    x = leftPaddle.ycor()
+    x -= 20
     leftPaddle.sety(y)    
 
 def rightPaddleUp():
@@ -71,17 +71,17 @@ def rightPaddleUp():
 
 def rightPaddleDown():
     y = leftPaddle.ycor()
-    y += 20
+    y -= 20
     leftPaddle.sety(y)
 
 def rightPaddleLeft():
-    y = leftPaddle.ycor()
-    y += 20
+    x = leftPaddle.ycor()
+    x += 20
     leftPaddle.sety(y)
 
 def rightPaddleRight():
-    y = leftPaddle.ycor()
-    y += 20
+    x = leftPaddle.ycor()
+    x -= 20
     leftPaddle.sety(y)
 
 # Keyboard binding
@@ -90,10 +90,10 @@ window.onkeypress(leftPaddleUp, "w")
 window.onkeypress(leftPaddleDown, "s")
 window.onkeypress(leftPaddleLeft, "a")
 window.onkeypress(leftPaddleRight, "d")
-window.onkeypress(rightPaddleUp, "w")
-window.onkeypress(rightPaddleDown, "s")
-window.onkeypress(rightPaddleLeft, "a")
-window.onkeypress(rightPaddleRight, "d")
+window.onkeypress(rightPaddleUp, "i")
+window.onkeypress(rightPaddleDown, "k")
+window.onkeypress(rightPaddleLeft, "j")
+window.onkeypress(rightPaddleRight, "l")
 
 # Main Game Loop
 while True:
