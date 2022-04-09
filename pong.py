@@ -42,6 +42,8 @@ ball.color('orange')
 ball.shapesize(stretch_wid=1, stretch_len=1)
 ball.penup()
 ball.goto(0, 0)
+ball.dx = 2
+ball.dx = 2
 
 #Function
 def leftPaddleUp():
@@ -98,4 +100,33 @@ window.onkeypress(rightPaddleRight, "l")
 # Main Game Loop
 while True:
     window.update()
-    
+
+    # Move The Ball
+    ball.setx(ball.xcor() + ball.dx)
+    ball.sety(ball.ycor() + ball.dy)
+
+    # Border Checking
+    if ball.ycor() > 290:
+        ball.sety(290)
+        ball.dy *= -1
+
+    if ball.ycor() < 290:
+        ball.sety(-290)
+        ball.dy *= -1
+
+    if ball.xcor() > 390:
+        ball.goto(0, 0)
+        ball.dx *= -1
+
+    if ball.xcor() < -390:
+        ball.goto(0, 0)
+        ball.dx *= -1
+
+    # Paddle and Ball Collisions
+    if (ball.xcor() > 340 and ball.xcor() < 350) and (ball.ycor() < rightPaddle.ycor() + 50 and ball.ycor() > rightPaddle.ycor() -50):
+        ball.setx(340)
+        ball.dx *= -1
+
+    if (ball.xcor() < 340 and ball.xcor() > -350) and (ball.ycor() < leftPaddle.ycor() + 50 and ball.ycor() > leftPaddle.ycor() -50):
+        ball.setx(-340)
+        ball.dx *= -1
